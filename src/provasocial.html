@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova social</title>
+    <style>
+
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    background-color:#f3f3f3;
+  }
+
+  .carrossel{
+    /* box-shadow: 2px 2px 4px black; */
+    overflow: hidden;
+    height: 500px;
+    width: 800px;
+   
+  }
+  .container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+  }
+
+  img{
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+    margin-left:15% ;
+    padding: 6em;
+    
+  }
+    </style>
+</head>
+<body>
+    <div class="carrossel">
+
+
+       <div class="container" id="img">
+            <img src=https://i.pinimg.com/originals/15/2a/3e/152a3e4bbb22ec59291c3584ea8d83aa.jpg alt="">
+            <img src=https://i.pinimg.com/originals/2a/01/21/2a0121208157756939dec089c7a55d5d.jpg  alt="">
+            <img src=https://i.pinimg.com/originals/21/63/71/21637133d4afcd7fb2347022a8862364.jpg alt="">
+            <img src= https://i.pinimg.com/originals/f5/bb/6f/f5bb6f5e5597c757d88324e3c31b3bcb.jpg alt="">
+        
+       </div>
+    
+    </div>
+    <script>
+        const imgs = document.getElementById("img");
+const img = document.querySelectorAll("#img img");
+
+let idx = 0;
+
+function carrossel(){
+
+    idx++;
+
+    if (idx > img.length - 1) {
+        idx = 0;
+    }
+
+    imgs.style.transform = `translateX(${ -idx * 600}px)`;
+}
+
+setInterval(carrossel, 3500);
+    </script>
+</body>
+</html>

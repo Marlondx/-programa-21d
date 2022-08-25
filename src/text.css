@@ -1,0 +1,54 @@
+/* @keyframes ani {
+    0%{
+       transform:scale(1);
+    }
+    100%{
+       transform: scale(1.5);
+    }
+   }
+    button{
+       color: red;
+       background-color: black
+   }
+   
+  button:hover{
+   animation-name: ani;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-out;
+   animation-iteration-count:infinite ;
+   animation-direction: alternate;
+   cursor: pointer;
+  } */
+
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  .carrossel{
+    /* box-shadow: 2px 2px 4px black; */
+    overflow: hidden;
+    height: 500px;
+    width: 1200px;
+    border-radius: 20px;
+  }
+  .container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+  }
+
+  img{
+    object-fit: cover;
+    height: 500px;
+    width: 2000px;
+    margin: 0 0 0 1%;
+  }

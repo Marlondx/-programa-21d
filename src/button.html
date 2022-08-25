@@ -1,0 +1,37 @@
+<style>
+    @keyframes anima {
+      0%{
+         transform:scale(1);
+      }
+      100%{
+         transform: scale(1.2);
+      }
+     }
+
+     button{
+         color: red;
+     }
+     
+    button{
+     animation-name: anima;
+     animation-duration: 0.5s;
+     animation-timing-function: ease-out;
+     animation-iteration-count:infinite ;
+     animation-direction: alternate;
+     cursor: pointer;
+    }
+</style> 
+
+<body style="  
+            overflow: hidden; background-color: #F3F3F3;">
+                 <div
+                     style="display:flex; 
+                     width:100vw; margin:0 0 0 0; align-items:  center; flex-direction: column">
+                         <button  style="width: 37%; margin: 2% 0 10% 0;
+                         height: 60px; 
+                         background: #860321; color: #ffffff;
+                         border-color: #860321;
+                         border-radius: 50px;"><b style="font-weight:750 ;">COMEÇAR AGORA (CLIQUE AQUI)</b>
+                         </button>
+                 </div>
+            </body>
